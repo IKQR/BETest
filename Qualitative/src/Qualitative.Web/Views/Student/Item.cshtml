@@ -1,0 +1,29 @@
+﻿@model Qualitative.Models.Student.StudentModel
+
+@{
+    ViewBag.Title = $"{ Model.Name } { Model.Surname }";
+}
+
+<h2>Student</h2>
+
+<table class="table">
+    <tbody>
+    <tr>
+        <th scope="row">@Html.DisplayNameFor(x => x.Id)</th>
+        <td>@Html.DisplayFor(x => x.Id)</td>
+    </tr>
+    <tr>
+        <th scope="row">@Html.DisplayNameFor(x => x.Name)</th>
+        <td>@Html.DisplayFor(x => x.Name)</td>
+    </tr>
+    <tr>
+        <th scope="row">@Html.DisplayNameFor(x => x.Surname)</th>
+        <td>@Html.DisplayFor(x => x.Surname)</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="btn-group" role="group">
+    <a type="button" class="btn btn-danger btn-lg" asp-action="Delete" asp-route-id="@Model.Id"> Delete </a>
+    <a type="button" class="btn btn-warning btn-lg" asp-action="Update"  asp-route-id="@Model.Id"> Edit </a>
+</div>

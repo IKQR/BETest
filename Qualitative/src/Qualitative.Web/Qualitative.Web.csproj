@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>87f98e64-ad56-42d0-b86c-0fc1abb46d03</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qualitative.BL.Abstract\Qualitative.BL.Abstract.csproj" />
+    <ProjectReference Include="..\Qualitative.BL.Impl\Qualitative.BL.Impl.csproj" />
+    <ProjectReference Include="..\Qualitative.DAL.Impl.Postgres\Qualitative.DAL.Impl.Postgres.csproj" />
+    <ProjectReference Include="..\Qualitative.Models\Qualitative.Models.csproj" />
+  </ItemGroup>
+
+</Project>

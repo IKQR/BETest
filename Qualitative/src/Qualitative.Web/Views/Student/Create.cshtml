@@ -1,0 +1,28 @@
+﻿@model Qualitative.Models.Student.StudentModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.Id)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name)
+        @Html.EditorFor(x => x.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Surname)
+        @Html.EditorFor(x => x.Surname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Surname)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
